@@ -144,7 +144,7 @@ color colorPromedio(int i_, int j_, int tam_){
   int azul = 0;
   int vi = 0;
   for(int i = i_; i< i_+tam_&& i<imagen.width; i++){
-    for(int j = 0 ; j< j_+tam_ && j < imagen.height; j++){
+    for(int j = j_ ; j< j_+tam_ && j < imagen.height; j++){
       color colorInicial=imagen.get(i,j);
        rojo += (colorInicial>>16) & 0XFF;
        verde += (colorInicial>>8) & 0XFF;
