@@ -13,7 +13,7 @@ void setup(){
     int offset = (i/base)%2==1? -base/2:0;
     for(int j = 0 +offset; j<height; j+= base){
       float ran = random(1);
-      if (ran<5){
+      if (ran<0.5){
         fill(colorPromedio( i, j, base, base,imagen));
         rect(i,j,base,base);
         fill(eligeAleatorio(i,j,base,imagen));
