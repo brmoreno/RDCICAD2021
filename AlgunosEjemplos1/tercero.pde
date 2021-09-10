@@ -12,16 +12,25 @@ void setup(){
   noStroke();
   for(int i = 0; i<width; i+=base){
     for(int j = 0; j<height; j+= base){
-      if (random(1)<0.5){
+      float ran = random(1);
+      if (ran<0.33){
         fill(colorPromedio( i, j, base, base,imagenp));
         rect(i,j,base,base);
         fill(colorPromedio( i, j, base, base,imagen));
         rect(i+base*0.1,j+base*0.1,base*.8,base*.8);
       }
+      else if (ran<0.66){
+        fill(colorPromedio( i, j, base, base,imagen));
+        rect(i,j,base,base);
+        fill(colorPromedio( i, j, base, base,imagenp));
+        rect(i+base*0.4,j+base*0.4,base*.2,base*.2);
+      }
       else{
         fill(colorPromedio( i, j, base, base,imagen));
         rect(i,j,base,base);
         fill(colorPromedio( i, j, base, base,imagenp));
+        rect(i+base*0.2,j+base*0.2,base*.6,base*.6);
+        fill(colorPromedio( i, j, base, base,imagen));
         rect(i+base*0.3,j+base*0.3,base*.4,base*.4);
       }
     }
